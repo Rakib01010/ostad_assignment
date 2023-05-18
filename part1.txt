@@ -1,0 +1,64 @@
+Part 1:
+
+1.What is client-side and server-side in web development, and what is the main difference between the two?
+
+Answer: Client-side mean frontend web development and server-side mean backed web development. In client-side user can see that is going on but In server-side all
+ the activities are hidden from the user. Only a developer who has done it khow everything . For example we can give user name and password but we dont know how it
+is checked and show if we are eligible or not. 
+The main difference is server-side is hidden and client-side is not.
+
+2..What is an HTTP request and what are the different types of HTTP requests?
+
+Answer:Hyper text peotocol  is a command sent by a client toserver .
+there are somme types od HTTP request
+GET,POST,DELETE,PUT,PATCH,HEAD,OPTIONS.
+
+
+3.What is JSON and what is it commonly used for in web development?
+JSON is a lightweight data sending nad receving format that can be used in every language .
+It is used to send data between server and web application 
+
+4.What is a middleware in web development, and give an example of how it can be used?
+Middlewere is a controller that exicute after sendiong request and before response.
+
+
+EXAMPLE:
+const express = require('express');
+const app = express();
+
+// Middleware function 
+const middleware = (req, res, next) => {
+    console.log("middleware is working");
+    next(); // Proceed to the next middleware or route handler
+};
+
+
+app.use(middleware);
+
+app.get('/get', (req, res) => {
+    res.send('Hello GET!').end();
+});
+app.post('/post', (req, res) => {
+    res.send('Hello Post!').end();
+});
+app.delete('/delete', (req, res) => {
+    res.send('Hello delete!').end();
+});
+app.put('/put', (req, res) => {
+    res.send('Hello put!').end();
+});
+
+app.listen(8080, () => {
+    console.log('Server is working at 8080');
+});
+
+
+//here middleware will call everytime to all routes link put,delete,get,post and wrong(if path is wrong) too etc
+
+
+
+
+5.What is a controller in web development, and what is its role in the MVC architecture?
+
+ANSWER:The code that control  everything between request from client and response from server.
+Controller is responsible for http and https request. It recives user input,update the model,handles user command etc
