@@ -1,14 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <title>Bootstrap Web Application</title>
+    <style>
+body {
+  background-color: #f8f9fa;
+}
+
+body.dark-mode {
+  background-color: #212529; 
+  color: #fff; /
+}
+
+
+section {
+  padding: 50px 0;
+  margin: 0;
+}
+
+
+section h2, section p, section form {
+  text-align: center;
+}
+
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+
+#home {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+
+@media (max-width: 768px) {
+  section h1 {
+    font-size: 24px;
+  }
+
+  section h2 {
+    font-size: 20px;
+  }
+
+  section p {
+    font-size: 16px;
+  }
+
+  form {
+    max-width: 300px;
+  }
+}
+
+    </style>
 </head>
-<p>Here i will show the time right now</p>
-<div id="clock"></div>
+
 <body>
-    <script src="./clock.js"></script>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <div class="container">
+            <a class="navbar-brand" href="#">MyLogo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-5 text-center bg-info">
+        <div class="container">
+            <h1>Welcome to our Bootstrap Web App</h1>
+            <p>Build responsive web applications with ease using Bootstrap 5. Here you will able to se my works as a fresher</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-info">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are trying to make a Bootstrap application </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-info">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-3 bg-dark text-white text-center">
+        <div class="container">
+            &copy; 2023 Bootstrap Web App. All rights reserved.
+        </div>
+    </footer>
+     <!-- This link for nav bar -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+ 
+    <script>
+  
+    </script>
 </body>
+
 </html>
